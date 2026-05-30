@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{ea42de35-9cf5-42cf-ae95-0af483abd25f}</ProjectGuid>
+    <RootNamespace>summerAGS</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>\$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>./Lib/DxLib</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>./Lib/DxLib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>./Lib/DxLib</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>./Lib/DxLib</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\Object\GuildObject\ WallGuild.cpp" />
+    <ClCompile Include="Src\Object\GuildObject\ WallGuild2.cpp" />
+    <ClCompile Include="Src\Object\GuildObject\ WallGuildZ.cpp" />
+    <ClCompile Include="Src\Object\Item\Material\BloodBag.cpp" />
+    <ClCompile Include="Src\Object\Item\Product\DarkWand.cpp" />
+    <ClCompile Include="Src\Object\Item\Product\LightWand.cpp" />
+    <ClCompile Include="Src\Object\Item\Product\IceWand.cpp" />
+    <ClCompile Include="Src\Object\Item\Product\EarthWand.cpp" />
+    <ClCompile Include="Src\Object\Item\Product\FireWand.cpp" />
+    <ClCompile Include="Src\Object\Item\Product\DarkSword.cpp" />
+    <ClCompile Include="Src\Object\Item\Product\LightSword.cpp" />
+    <ClCompile Include="Src\Object\Item\Product\IceSword.cpp" />
+    <ClCompile Include="Src\Object\Item\Material\DarkMagicStone.cpp" />
+    <ClCompile Include="Src\Object\Item\Material\LightMagicStone.cpp" />
+    <ClCompile Include="Src\Object\Item\Material\IceMagicStone.cpp" />
+    <ClCompile Include="Src\Object\Item\Product\EarthSword.cpp" />
+    <ClCompile Include="Src\Object\Item\Material\EarthMagicStone.cpp" />
+    <ClCompile Include="Src\Object\Item\Product\FireSword.cpp" />
+    <ClCompile Include="Src\Object\Item\Material\FireMagicStone.cpp" />
+    <ClCompile Include="Src\Object\Item\Material\IronOre.cpp" />
+    <ClCompile Include="Src\Object\Item\Product\DefensePotion.cpp" />
+    <ClCompile Include="Src\Object\Item\Material\HardbodyHerb.cpp" />
+    <ClCompile Include="Src\Object\Item\Product\PowerPotion.cpp" />
+    <ClCompile Include="Src\Object\Item\Material\DemonPowerHerb.cpp" />
+    <ClCompile Include="Src\Object\Item\Product\Speed​​Potion.cpp" />
+    <ClCompile Include="Src\Object\Item\Material\GaleHerb.cpp" />
+    <ClCompile Include="Src\Object\Item\Product\AntiParalysisPotion.cpp" />
+    <ClCompile Include="Src\Object\Item\Material\ParalysisHerb.cpp" />
+    <ClCompile Include="Src\DrawUI\SceneUI\LibraryUI.cpp" />
+    <ClCompile Include="Src\DrawUI\SceneUI\GameHUD.cpp" />
+    <ClCompile Include="Src\DrawUI\SceneUI\PauseMenu.cpp" />
+    <ClCompile Include="Src\Object\Manager\BookshelfManager.cpp" />
+    <ClCompile Include="Src\Object\GuildObject\Counter.cpp" />
+    <ClCompile Include="Src\Object\AtelierObject\ItemBox.cpp" />
+    <ClCompile Include="Src\Object\AtelierObject\Bookshelf.cpp" />
+    <ClCompile Include="Src\DrawUI\SceneUI\ItemPickupUI.cpp" />
+    <ClCompile Include="Src\Object\GardenObject\FenceObjectX.cpp" />
+    <ClCompile Include="Src\Object\GardenObject\FenceObject.cpp" />
+    <ClCompile Include="Src\Object\Manager\FenceManager.cpp" />
+    <ClCompile Include="Src\Object\Manager\OreMnanager.cpp" />
+    <ClCompile Include="Src\Object\GardenObject\OreObject.cpp" />
+    <ClCompile Include="Src\Object\PlayerStop.cpp" />
+    <ClCompile Include="Src\Object\Manager\PlantManager.cpp" />
+    <ClCompile Include="Src\Object\GardenObject\PlantObject.cpp" />
+    <ClCompile Include="Src\Object\GuildObject\Shop.cpp" />
+    <ClCompile Include="Src\Object\Item\Seed\RandomSeed.cpp" />
+    <ClCompile Include="Src\Object\Item\Seed\SeedItem.cpp" />
+    <ClCompile Include="Src\Manager\System\DateTimeManager.cpp" />
+    <ClCompile Include="Src\Manager\System\TimeManager.cpp" />
+    <ClCompile Include="Src\Object\Manager\BlockManager.cpp" />
+    <ClCompile Include="Src\Object\GardenObject\Block.cpp" />
+    <ClCompile Include="Src\Object\AtelierObject\AlchemyPot.cpp" />
+    <ClCompile Include="Src\Object\GuildObject\Receptionist.cpp" />
+    <ClCompile Include="Src\DrawUI\SceneUI\QuestUI.cpp" />
+    <ClCompile Include="Src\Object\Interact\HitObject.cpp" />
+    <ClCompile Include="Src\Object\NullHitObject.cpp" />
+    <ClCompile Include="Src\Object\GuildObject\BulletinBoard.cpp" />
+    <ClCompile Include="Src\Object\Manager\CollisionManager.cpp" />
+    <ClCompile Include="Src\Manager\Generic\Camera.cpp" />
+    <ClCompile Include="Src\Object\Item\Product\Garbage.cpp" />
+    <ClCompile Include="Src\Object\Manager\AlchemyRecipe.cpp" />
+    <ClCompile Include="Src\Object\Manager\AlchemyManager.cpp" />
+    <ClCompile Include="Src\Object\Item\Product\MagicPotion.cpp" />
+    <ClCompile Include="Src\Object\Item\Product\AntidotePotion.cpp" />
+    <ClCompile Include="Src\Object\Item\Product\RecoveryPotion.cpp" />
+    <ClCompile Include="Src\Object\Item\Product\ProductItem.cpp" />
+    <ClCompile Include="Src\Object\Item\Material\MaterialItem.cpp" />
+    <ClCompile Include="Src\Object\Item\Material\MagicFlower.cpp" />
+    <ClCompile Include="Src\Object\Item\Material\AntidoteHerb.cpp" />
+    <ClCompile Include="Src\DrawUI\SceneUI\InventoryUI.cpp" />
+    <ClCompile Include="Src\Object\Manager\ItemManager.cpp" />
+    <ClCompile Include="Src\Object\Item\Material\Herb.cpp" />
+    <ClCompile Include="Src\Object\Item\ItemBase.cpp" />
+    <ClCompile Include="Src\Object\player.cpp" />
+    <ClCompile Include="Src\Scene\SceneGameClear.cpp" />
+    <ClCompile Include="Src\Scene\SceneGameOver.cpp" />
+    <ClCompile Include="Src\Stage\PrivateRoomStage.cpp" />
+    <ClCompile Include="Src\Stage\GuildStage.cpp" />
+    <ClCompile Include="Src\Stage\GardenStage.cpp" />
+    <ClCompile Include="Src\Stage\AtelierStage.cpp" />
+    <ClCompile Include="Src\Application.cpp" />
+    <ClCompile Include="Src\Common\Easing.cpp" />
+    <ClCompile Include="Src\Common\Fader.cpp" />
+    <ClCompile Include="Src\Common\ImageFader.cpp" />
+    <ClCompile Include="Src\Common\IntVector3.cpp" />
+    <ClCompile Include="Src\Common\Quaternion.cpp" />
+    <ClCompile Include="Src\Common\Vector2.cpp" />
+    <ClCompile Include="Src\DrawUI\Font.cpp" />
+    <ClCompile Include="Src\DrawUI\SceneUI\SceneUI.cpp" />
+    <ClCompile Include="Src\Fps\FpsControll.cpp" />
+    <ClCompile Include="Src\main.cpp" />
+    <ClCompile Include="Src\Manager\Decoration\EffectManager.cpp" />
+    <ClCompile Include="Src\Manager\Decoration\SoundManager.cpp" />
+    <ClCompile Include="Src\Manager\Generic\InputManager.cpp" />
+    <ClCompile Include="Src\Manager\Generic\Resource.cpp" />
+    <ClCompile Include="Src\Manager\Generic\ResourceManager.cpp" />
+    <ClCompile Include="Src\Manager\Generic\SceneManager.cpp" />
+    <ClCompile Include="Src\Manager\System\Collision.cpp" />
+    <ClCompile Include="Src\Object\Common\AnimationController.cpp" />
+    <ClCompile Include="Src\Object\Common\Transform.cpp" />
+    <ClCompile Include="Src\Object\Grid.cpp" />
+    <ClCompile Include="Src\Scene\SceneBase.cpp" />
+    <ClCompile Include="Src\Scene\SceneGame.cpp" />
+    <ClCompile Include="Src\Scene\SceneTitle.cpp" />
+    <ClCompile Include="Src\Utility\Utility.cpp" />
+    <ClCompile Include="Src\Stage\StageBase.cpp" />
+    <ClCompile Include="Src\Object\Manager\StageManager.cpp" />
+    <ClCompile Include="Src\Object\Item\Material\Water.cpp" />
+    <ClCompile Include="Src\Object\UnitBase.cpp" />
+    <ClCompile Include="Src\Object\AtelierObject\Teleport.cpp" />
+    <ClCompile Include="Src\Object\GuildObject\TeleportMovement.cpp" />
+    <ClCompile Include="Src\DrawUI\SceneUI\TeleportUI.cpp" />
+    <ClCompile Include="Src\Object\GardenObject\Warp.cpp" />
+    <ClCompile Include="Src\Object\GardenObject\WellObject.cpp" />
+    <ClCompile Include="Src\Object\AtelierObject\WallAtelier.cpp" />
+    <ClCompile Include="Src\Object\AtelierObject\WallAtelier2.cpp" />
+    <ClCompile Include="Src\Object\AtelierObject\WallAtelierZ.cpp" />
+    <ClCompile Include="Src\Object\AtelierObject\WallAtelierZZ.cpp" />
+    <ClCompile Include="Src\Object\GuildObject\WallGuildZZ.cpp" />
+    <ClCompile Include="Src\Object\AtelierObject\TableSetAtelier.cpp" />
+    <ClCompile Include="Src\Object\GuildObject\TableSetGuild.cpp" />
+    <ClCompile Include="Src\Object\Manager\TableSetGuildManager.cpp" />
+    <ClCompile Include="Src\Object\Item\Material\Sword.cpp" />
+    <ClCompile Include="Src\Object\Item\Material\WaterMagicStone.cpp" />
+    <ClCompile Include="Src\Object\Item\Product\WaterSword.cpp" />
+    <ClCompile Include="Src\Object\Item\Material\WindMagicStone.cpp" />
+    <ClCompile Include="Src\Object\Item\Product\WindSword.cpp" />
+    <ClCompile Include="Src\Object\Item\Material\Wand.cpp" />
+    <ClCompile Include="Src\Object\Item\Product\WaterWand.cpp" />
+    <ClCompile Include="Src\Object\Item\Product\WindWand.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Src\Object\GuildObject\ WallGuild.h" />
+    <ClInclude Include="Src\Object\GuildObject\ WallGuild2.h" />
+    <ClInclude Include="Src\Object\GuildObject\ WallGuildZ.h" />
+    <ClInclude Include="Src\Object\Item\Material\BloodBag.h" />
+    <ClInclude Include="Src\Object\Item\Product\DarkWand.h" />
+    <ClInclude Include="Src\Object\Item\Product\LightWand.h" />
+    <ClInclude Include="Src\Object\Item\Product\IceWand.h" />
+    <ClInclude Include="Src\Object\Item\Product\EarthWand.h" />
+    <ClInclude Include="Src\Object\Item\Product\FireWand.h" />
+    <ClInclude Include="Src\Object\Item\Product\DarkSword.h" />
+    <ClInclude Include="Src\Object\Item\Product\LightSword.h" />
+    <ClInclude Include="Src\Object\Item\Product\IceSword.h" />
+    <ClInclude Include="Src\Object\Item\Material\DarkMagicStone.h" />
+    <ClInclude Include="Src\Object\Item\Material\LightMagicStone.h" />
+    <ClInclude Include="Src\Object\Item\Material\IceMagicStone.h" />
+    <ClInclude Include="Src\Object\Item\Product\EarthSword.h" />
+    <ClInclude Include="Src\Object\Item\Material\EarthMagicStone.h" />
+    <ClInclude Include="Src\Object\Item\Product\FireSword.h" />
+    <ClInclude Include="Src\Object\Item\Material\FireMagicStone.h" />
+    <ClInclude Include="Src\Object\Item\Material\IronOre.h" />
+    <ClInclude Include="Src\Object\Item\Product\DefensePotion.h" />
+    <ClInclude Include="Src\Object\Item\Material\HardbodyHerb.h" />
+    <ClInclude Include="Src\Object\Item\Product\PowerPotion.h" />
+    <ClInclude Include="Src\Object\Item\Material\DemonPowerHerb.h" />
+    <ClInclude Include="Src\Object\Item\Product\Speed​​Potion.h" />
+    <ClInclude Include="Src\Object\Item\Material\GaleHerb.h" />
+    <ClInclude Include="Src\Object\Item\Product\AntiParalysisPotion.h" />
+    <ClInclude Include="Src\Object\Item\Material\ParalysisHerb.h" />
+    <ClInclude Include="Src\DrawUI\SceneUI\LibraryUI.h" />
+    <ClInclude Include="Src\DrawUI\SceneUI\GameHUD.h" />
+    <ClInclude Include="Src\DrawUI\SceneUI\PauseMenu.h" />
+    <ClInclude Include="Src\Object\Manager\BookshelfManager.h" />
+    <ClInclude Include="Src\Object\GuildObject\Counter.h" />
+    <ClInclude Include="Src\Object\AtelierObject\ItemBox.h" />
+    <ClInclude Include="Src\Object\AtelierObject\Bookshelf.h" />
+    <ClInclude Include="Src\DrawUI\SceneUI\ItemPickupUI.h" />
+    <ClInclude Include="Src\Object\GardenObject\FenceObjectX.h" />
+    <ClInclude Include="Src\Object\GardenObject\FenceObject.h" />
+    <ClInclude Include="Src\Object\Manager\FenceManager.h" />
+    <ClInclude Include="Src\Object\Manager\OreMnanager.h" />
+    <ClInclude Include="Src\Object\GardenObject\OreObject.h" />
+    <ClInclude Include="Src\Object\PlayerStop.h" />
+    <ClInclude Include="Src\Object\Manager\PlantManager.h" />
+    <ClInclude Include="Src\Object\GardenObject\PlantObject.h" />
+    <ClInclude Include="Src\Object\GuildObject\Shop.h" />
+    <ClInclude Include="Src\Object\Item\Seed\RandomSeed.h" />
+    <ClInclude Include="Src\Object\Item\Seed\SeedItem.h" />
+    <ClInclude Include="Src\Manager\System\DateTimeManager.h" />
+    <ClInclude Include="Src\Manager\System\TimeManager.h" />
+    <ClInclude Include="Src\Object\Manager\BlockManager.h" />
+    <ClInclude Include="Src\Object\GardenObject\Block.h" />
+    <ClInclude Include="Src\Object\AtelierObject\AlchemyPot.h" />
+    <ClInclude Include="Src\Object\GuildObject\Receptionist.h" />
+    <ClInclude Include="Src\DrawUI\SceneUI\QuestUI.h" />
+    <ClInclude Include="Src\Object\Interact\HitObject.h" />
+    <ClInclude Include="Src\Object\NullHitObject.h" />
+    <ClInclude Include="Src\Object\GuildObject\BulletinBoard.h" />
+    <ClInclude Include="Src\Object\Manager\CollisionManager.h" />
+    <ClInclude Include="Src\Manager\Generic\Camera.h" />
+    <ClInclude Include="Src\Object\Item\Product\Garbage.h" />
+    <ClInclude Include="Src\Object\Manager\AlchemyRecipe.h" />
+    <ClInclude Include="Src\Object\Manager\AlchemyManager.h" />
+    <ClInclude Include="Src\Object\Item\Product\MagicPotion.h" />
+    <ClInclude Include="Src\Object\Item\Product\AntidotePotion.h" />
+    <ClInclude Include="Src\Object\Item\Product\RecoveryPotion.h" />
+    <ClInclude Include="Src\Object\Item\Product\ProductItem.h" />
+    <ClInclude Include="Src\Object\Item\Material\MaterialItem.h" />
+    <ClInclude Include="Src\Object\Item\Material\MagicFlower.h" />
+    <ClInclude Include="Src\Object\Item\Material\AntidoteHerb.h" />
+    <ClInclude Include="Src\DrawUI\SceneUI\InventoryUI.h" />
+    <ClInclude Include="Src\Object\Manager\ItemManager.h" />
+    <ClInclude Include="Src\Object\Item\Material\Herb.h" />
+    <ClInclude Include="Src\Object\Item\ItemBase.h" />
+    <ClInclude Include="Src\Object\player.h" />
+    <ClInclude Include="Src\Scene\SceneGameClear.h" />
+    <ClInclude Include="Src\Scene\SceneGameOver.h" />
+    <ClInclude Include="Src\Stage\PrivateRoomStage.h" />
+    <ClInclude Include="Src\Stage\GuildStage.h" />
+    <ClInclude Include="Src\Stage\GardenStage.h" />
+    <ClInclude Include="Src\Stage\AtelierStage.h" />
+    <ClInclude Include="Src\Application.h" />
+    <ClInclude Include="Src\Common\Easing.h" />
+    <ClInclude Include="Src\Common\Fader.h" />
+    <ClInclude Include="Src\Common\ImageFader.h" />
+    <ClInclude Include="Src\Common\IntVector3.h" />
+    <ClInclude Include="Src\Common\Quaternion.h" />
+    <ClInclude Include="Src\Common\Vector2.h" />
+    <ClInclude Include="Src\DrawUI\Font.h" />
+    <ClInclude Include="Src\DrawUI\SceneUI\SceneUI.h" />
+    <ClInclude Include="Src\Fps\FpsControll.h" />
+    <ClInclude Include="Src\main.h" />
+    <ClInclude Include="Src\Manager\Decoration\EffectManager.h" />
+    <ClInclude Include="Src\Manager\Decoration\SoundManager.h" />
+    <ClInclude Include="Src\Manager\Generic\InputManager.h" />
+    <ClInclude Include="Src\Manager\Generic\Resource.h" />
+    <ClInclude Include="Src\Manager\Generic\ResourceManager.h" />
+    <ClInclude Include="Src\Manager\Generic\SceneManager.h" />
+    <ClInclude Include="Src\Manager\System\Collision.h" />
+    <ClInclude Include="Src\Object\Common\AnimationController.h" />
+    <ClInclude Include="Src\Object\Common\Transform.h" />
+    <ClInclude Include="Src\Object\Grid.h" />
+    <ClInclude Include="Src\Scene\SceneBase.h" />
+    <ClInclude Include="Src\Scene\SceneGame.h" />
+    <ClInclude Include="Src\Scene\SceneTitle.h" />
+    <ClInclude Include="Src\Utility\Utility.h" />
+    <ClInclude Include="Src\Stage\StageBase.h" />
+    <ClInclude Include="Src\Object\Manager\StageManager.h" />
+    <ClInclude Include="Src\Object\Item\Material\Water.h" />
+    <ClInclude Include="Src\Object\UnitBase.h" />
+    <ClInclude Include="Src\Object\AtelierObject\Teleport.h" />
+    <ClInclude Include="Src\Object\GuildObject\TeleportMovement.h" />
+    <ClInclude Include="Src\DrawUI\SceneUI\TeleportUI.h" />
+    <ClInclude Include="Src\Object\GardenObject\Warp.h" />
+    <ClInclude Include="Src\Object\GardenObject\WellObject.h" />
+    <ClInclude Include="Src\Object\AtelierObject\WallAtelier.h" />
+    <ClInclude Include="Src\Object\AtelierObject\WallAtelier2.h" />
+    <ClInclude Include="Src\Object\AtelierObject\WallAtelierZ.h" />
+    <ClInclude Include="Src\Object\AtelierObject\WallAtelierZZ.h" />
+    <ClInclude Include="Src\Object\GuildObject\WallGuildZZ.h" />
+    <ClInclude Include="Src\Object\AtelierObject\TableSetAtelier.h" />
+    <ClInclude Include="Src\Object\GuildObject\TableSetGuild.h" />
+    <ClInclude Include="Src\Object\Manager\TableSetGuildManager.h" />
+    <ClInclude Include="Src\Object\Item\Material\Sword.h" />
+    <ClInclude Include="Src\Object\Item\Material\WaterMagicStone.h" />
+    <ClInclude Include="Src\Object\Item\Product\WaterSword.h" />
+    <ClInclude Include="Src\Object\Item\Material\WindMagicStone.h" />
+    <ClInclude Include="Src\Object\Item\Product\WindSword.h" />
+    <ClInclude Include="Src\Object\Item\Material\Wand.h" />
+    <ClInclude Include="Src\Object\Item\Product\WaterWand.h" />
+    <ClInclude Include="Src\Object\Item\Product\WindWand.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
